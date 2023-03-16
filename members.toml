@@ -1,6 +1,8 @@
 [member]
+# only discord and github are required
 discord = "Wasdee#5685"
 github = "wasdee"
+# others are optionals
 skills = ["python", "data-engineer"]
 resources = ["GTX3090", "GTX3090", "128GB", "24Cores", "ZED 2i", "iPhone 13"]
 
