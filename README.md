@@ -1,6 +1,6 @@
 # bkk-reward-hunter
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 make this bkk a better place while earning money 😜🤑🥳win-win
 
@@ -32,6 +32,7 @@ We note our philosophy and grand note [here](https://codustry.notion.site/Bangko
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ibsfb"><img src="https://avatars.githubusercontent.com/u/120288249?v=4?s=100" width="100px;" alt="ibsfb"/><br /><sub><b>ibsfb</b></sub></a><br /><a href="#design-ibsfb" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Leothad"><img src="https://avatars.githubusercontent.com/u/25746490?v=4?s=100" width="100px;" alt="Leothad"/><br /><sub><b>Leothad</b></sub></a><br /><a href="#content-Leothad" title="Content">🖋</a> <a href="#design-Leothad" title="Design">🎨</a></td>
     </tr>
   </tbody>
 </table>
