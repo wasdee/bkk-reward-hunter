@@ -6,6 +6,9 @@ make this bkk a better place while earning money 😜🤑🥳win-win
 
 ![team bangkok reward hunter](Assets/team_cover.png)
 
+## Project Grand Note
+We note our philosophy and grand note [here](https://codustry.notion.site/Bangkok-Reward-Hunter-deb96142a7fd4fc897f9d1454077b158).
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
