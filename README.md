@@ -15,6 +15,8 @@ We note our philosophy and grand note [here](https://codustry.notion.site/Bangko
     - [x] ZED 2i motorcycle detection/tracking is working.
     - [x] YOLOv8 is working.
     - [ ] \[optional\]iPhone on-device inference is working.
+    - [ ] \[optional\]Sementics inference for Dash Cam.
+
   - [ ] BMA website reward is working. at getting real reward at the end.
     - [ ] 10s rewards per month.
     - [ ] 100s rewards per month.
