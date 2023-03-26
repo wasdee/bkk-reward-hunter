@@ -69,15 +69,20 @@ if __name__ == "__main__":
 
     # Configure object detection runtime parameters
     obj_runtime_param = sl.ObjectDetectionRuntimeParameters()
-    obj_runtime_param.detection_confidence_threshold = 60
-    obj_runtime_param.object_class_filter = [ sl.OBJECT_CLASS.VEHICLE]    # Only detect Persons
+    obj_runtime_param.detection_confidence_threshold = 30  # Minimum confidence threshold for detection
+    obj_runtime_param.object_class_filter = [ sl.OBJECT_CLASS.VEHICLE, sl.OBJECT_CLASS.PERSON]    # Only detect Persons
     # sl.OBJECT_SUBCLASS.MOTORBIKE,
 
     # Create ZED objects filled in the main loop
     objects = sl.Objects()
     image = sl.Mat()
 
+    ready = False
+
     while viewer.is_available():
+        if not ready:
+            input("Press Enter to start detection...")
+            ready = True
         # Grab an image, a RuntimeParameters object must be given to grab()
         if zed.grab(runtime_parameters) == sl.ERROR_CODE.SUCCESS:
             # Retrieve left image
@@ -86,6 +91,7 @@ if __name__ == "__main__":
             zed.retrieve_objects(objects, obj_runtime_param)
             # Update GL view
             viewer.update_view(image, objects)
+
 
     viewer.exit()
 

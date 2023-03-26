@@ -10,6 +10,8 @@ import math
 import ctypes
 import pyzed.sl as sl
 
+from .subclass_mapper import subclass2str
+
 
 VERTEX_SHADER = """
 # version 330 core
@@ -610,7 +612,10 @@ class GLViewer:
                         color_id = color_class
                     else:
                         pos = [_objs.object_list[i].position[0], _objs.object_list[i].bounding_box[0][1], _objs.object_list[i].position[2]]
-                        self.create_id_rendering(pos, color_id, _objs.object_list[i].id)
+                        prediction_subclass = _objs.object_list[i].sublabel
+                        self.create_id_rendering(pos, color_id, _objs.object_list[i].id, prediction_subclass)
+
+                    
 
                     self.create_bbox_rendering(bounding_box, color_id)
 
@@ -626,11 +631,12 @@ class GLViewer:
 	    # Add top face
 	    self.BBox_faces.add_top_face(_bbox, _bbox_clr)
 
-    def create_id_rendering(self, _center, _clr, _id):
+    def create_id_rendering(self, _center, _clr, _id, _prediction_subclass):
         tmp = ObjectClassName()
         tmp.name = "ID: " + str(_id)
         tmp.color = _clr
         tmp.position = np.array([_center[0], _center[1], _center[2]], np.float32)
+        tmp.prediction_subclass = subclass2str[_prediction_subclass]
         self.objects_name = np.append(self.objects_name, tmp)
 
     def idle(self):
@@ -687,10 +693,18 @@ class GLViewer:
         if len(self.objects_name) > 0:
             for obj in self.objects_name:
                 pt2d = self.compute_3D_projection(obj.position, self.projection, wnd_size)
+
+                # Print ID
                 glColor4f(obj.color[0], obj.color[1], obj.color[2], obj.color[3])
                 glWindowPos2f(pt2d[0], pt2d[1])
                 for i in range(len(obj.name)):
                     glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ctypes.c_int(ord(obj.name[i])))
+
+                # Print Subclass
+                glWindowPos2f(pt2d[0], pt2d[1] - 20)
+                for i in range(len(obj.prediction_subclass)):
+                    glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ctypes.c_int(ord(obj.prediction_subclass[i])))
+
             glEnable(GL_BLEND)
 
     def compute_3D_projection(self, _pt, _cam, _wnd_size):
@@ -709,3 +723,4 @@ class ObjectClassName:
         self.position = [0,0,0] # [x,y,z]
         self.name = ""
         self.color = [0,0,0,0]  # [r,g,b,a]
+        self.prediction_subclass = ""
