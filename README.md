@@ -9,6 +9,18 @@ make this bkk a better place while earning money 😜🤑🥳win-win
 ## Project Grand Note
 We note our philosophy and grand note [here](https://codustry.notion.site/Bangkok-Reward-Hunter-deb96142a7fd4fc897f9d1454077b158).
 
+## Project Milestones
+  - [x] AI is working, no fine tuning needed.
+    - [x] RSTP Streamer Inference is working.
+    - [x] ZED 2i motorcycle detection/tracking is working.
+    - [x] YOLOv8 is working.
+    - [ ] \[optional\]iPhone on-device inference is working.
+  - [ ] BMA website reward is working. at getting real reward at the end.
+    - [ ] 10s rewards per month.
+    - [ ] 100s rewards per month.
+    - [ ] 1000s rewards per month.
+  - [ ] create web app for user to add their RTSP stream..
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
