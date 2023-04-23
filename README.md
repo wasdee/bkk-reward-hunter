@@ -6,8 +6,16 @@ make this bkk a better place while earning money 😜🤑🥳win-win
 
 ![team bangkok reward hunter](Assets/team_cover.png)
 
-## Project Grand Note
-We note our philosophy and grand note [here](https://codustry.notion.site/Bangkok-Reward-Hunter-deb96142a7fd4fc897f9d1454077b158).
+## Join us
+ผมชื่อเบน เป็น project lead ยินดีต้อนรับทุกคนที่สนใจมาร่วมเป็นส่วนหนึ่งของทีม โดยเฉพาะคนที่สนใจด้าน AI และการเขียนโปรแกรม สามารถ
+มาคุยกันได้ที่ [Discord](https://discord.gg/rTzpv7CsgH) ห้อง `#bkk-reward-hunter` 
+## What is this?
+> TL;DR
+> ไปขึ้นเงินกับกรุงเทพฯเวลาได้รูปคนขับมอเตอร์ไซค์ขึ้นทางเท้า โดยที่เราใช้เอไอตรวจจับ และส่งเรื่องขึ้นเว็บด้วยสคริปต์อัตโนมัติ
+
+[![Video Thumbnail](Assets/video_thumbnail.jpg)](https://www.youtube.com/watch?v=yd3uA1XOtww)
+[Slides](https://www.canva.com/design/DAFeRClnA5A/W5Evc1sc61jt9F3tj_wXiw/edit?utm_content=DAFeRClnA5A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)[Notion](https://codustry.notion.site/Bangkok-Reward-Hunter-deb96142a7fd4fc897f9d1454077b158).
+
 
 ## Project Milestones
   - [x] AI is working, no fine tuning needed.
