@@ -1,0 +1,51 @@
+name: Daily Run
+
+on:
+  schedule:
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily_run:
+    runs-on: ubuntu-latest
+    permissions:
+        contents: write
+  
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+
+    - name: Configure 1Password Service Account
+      uses: 1password/load-secrets-action/configure@v1
+      with:
+        service-account-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
+
+    - name: Load Docker credentials
+      uses: 1password/load-secrets-action@v1
+      with:
+        # Export loaded secrets as environment variables
+        export-env: true
+      env:
+        REWARD_HEADER: op://OpenSource/Reward Bangkok/add more/header
+        REWARD_ENCRYPT_KEY: op://OpenSource/Reward Bangkok/add more/REWARD_ENCRYPT_KEY
+
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ETL/requirements.txt
+
+    - name: Run script
+      run: python ETL/track_status.py
+
+    - name: Commit and push changes
+      run: |
+        git add ETL/data/track_status/*
+        git commit -m "Automated commit: Updated track status data"
+        git push
