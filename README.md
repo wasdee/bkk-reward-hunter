@@ -23,6 +23,10 @@ We note our philosophy and grand note [here](https://codustry.notion.site/Bangko
     - [ ] 1000s rewards per month.
   - [ ] create web app for user to add their RTSP stream..
 
+## How to report a case?
+go to <https://reward.bangkok.go.th/reward2/> signup/signin and report a case.
+
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
