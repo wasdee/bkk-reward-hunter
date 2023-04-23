@@ -46,6 +46,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
+        git config --global user.name "reward-bangkok-bot"
+        git config --global user.email "github_action@nutchanon.org"
         git add ETL/data/track_status/*
         git commit -m "Automated commit: Updated track status data"
         git push
