@@ -38,6 +38,7 @@ from datetime import datetime
 
 date = datetime.now().strftime("%Y-%m-%d")
 output_dir = Path(__file__).parent.absolute() / "data" / "track_status"
+output_dir.mkdir(parents=True, exist_ok=True)
 fp = output_dir / f"reward_{date}.json.encrypted"
 with fp.open("wb") as f:
     f.write(encrypted)
